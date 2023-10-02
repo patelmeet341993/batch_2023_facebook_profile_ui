@@ -22,10 +22,9 @@ class _ProfilePageState extends State<ProfilePage> {
         Container(
           margin: EdgeInsets.symmetric(vertical: 15),
           width: double.maxFinite,
-        height: 10,
-        color: Colors.grey,)
-
-
+          height: 10,
+          color: Colors.grey,
+        )
       ],
     );
   }
@@ -33,13 +32,21 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget _actionBarSection() {
     return Row(
       children: [
-
-        _button(flex: 3, label: "Add to Story", backColor: Colors.deepPurple, textColor: Colors.white),
-
-        _button(flex: 3, label: "Add to Story", backColor: Colors.deepPurple, textColor: Colors.white),
-
-        _button(flex: 1, label: "...", backColor: Colors.deepPurple, textColor: Colors.white),
-
+        _button(
+            flex: 3,
+            label: "Add to Story",
+            backColor: Colors.deepPurple,
+            textColor: Colors.white),
+        _button(
+            flex: 3,
+            label: "Add to Story",
+            backColor: Colors.deepPurple,
+            textColor: Colors.white),
+        _button(
+            flex: 1,
+            label: "...",
+            backColor: Colors.deepPurple,
+            textColor: Colors.white),
       ],
     );
   }
@@ -81,14 +88,12 @@ class _ProfilePageState extends State<ProfilePage> {
           Positioned(
             bottom: 0,
             left: 10,
-            child: Container(
-              width: 160,
+            child: ClipOval(
+                child: Image.network(
+              "https://picsum.photos/400",
               height: 160,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(80),
-                color: Colors.orange,
-              ),
-            ),
+              width: 160,
+            )),
           )
         ],
       ),
